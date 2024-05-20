@@ -7,6 +7,82 @@
     <link rel="stylesheet" href="./main.css">
 </head>
 <body>
-    
+        <main class="buylist-box">
+            <form class="adder">
+                <input type="text" placeholder="Назва товару">
+                <button type="submit">Додати</button>
+            </form>
+            <section class="first product">
+                <div class="name">
+                    <p>Помідори</p>
+                </div>
+                <div class="quantity">
+                    <button class="minus">-</button>
+                    <button class="number">2</button>
+                    <button class="plus">+</button>
+                </div>
+                <div class="status">
+                    <button class="isBought">Не куплено</button>
+                    <button class="cancel">x</button>    
+                </div>
+            </section>
+            <section class="second-product">
+                <div class="name">
+                    <p>Печиво</p>
+                </div>
+                <div class="quantity">
+                    <button class="minus">-</button>
+                    <button class="number">2</button>
+                    <button class="plus">+</button>
+                </div>
+                <div class="status">
+                    <button class="isBought">Куплено</button>
+                    <button class="cancel">x</button>   
+                </div>
+            </section>
+            <section class="third-product">
+                <div class="name" contenteditable="true">
+                    <p>Сир</p>
+                </div>
+                <div class="quantity">
+                    <button class="minus">-</button>
+                    <button class="number">2</button>
+                    <button class="plus">+</button>
+                </div>
+                <div class="status">
+                    <button class="isBought">Не куплено</button>
+                    <button class="cancel">x</button>   
+                </div>
+            </section>
+        </main>
+
+        <aside class="cart">
+            <p class="title">Залишилось</p>
+            <div class="remaining-item">
+                <span class="product-item">
+                    Печиво
+                    <span class="amount">2</span>
+                </span>
+                <span class="product-item">
+                    Сир
+                    <span class="amount">1</span>
+                </span>
+            </div>
+            <p class="title">Куплено</p>
+            <div class="bought-item">
+                <span class="product-item">
+                    Помідори
+                    <span class="amount">2</span>
+                </span>
+            </div>
+        </aside>
+
+        <footer>
+            <button class="popup-badge">
+                <p class="buylist">Buy List</p>
+                <p class="creator">Created by:</p>
+                <p class="myname">Victoria Dyrda</p>
+            </button>
+        </footer>
 </body>
 </html>
