@@ -3,6 +3,7 @@ body{
     font-family: Trebuchet MS, sans-serif;
     display: flex;
     flex-wrap: wrap;
+    justify-content: space-between;
 	box-sizing: border-box;
     flex-direction: row;
 }
@@ -16,6 +17,7 @@ main, aside{
 }
 main{
 flex:4;
+height: 30%;
 }
 aside{
 flex:1;
@@ -23,11 +25,14 @@ margin-right: 2%;
 }
 .adder{
     display: flex;   
-    padding: 4% 4%;
-    border-bottom: 2px solid #BFBFBF;
+    padding: 2% 2%;
+    border-bottom: 1px solid #BFBFBF;
     height: 8%;
     align-items: center;
-    padding-bottom:4.6%;
+    padding-bottom:2.6%;
+}
+.product-name::placeholder{
+    text-indent: 10px;
 }
 .add-button, .product-name{
     width: 75%;
@@ -49,8 +54,87 @@ margin-right: 2%;
     width: 20%;
 }
 .product-name{
-    flex: 3;
+    flex: 5;
     margin-top: 5px;
+}
+section{
+    display: flex;
+	border-bottom: 1.5px solid lightgrey;
+    align-items: center;
+}
+
+.name, .quantity, .status{
+    width: 33%;
+    height: 65%;
+    align-items: center;
+    display: flex;
+    justify-content: right;
+ }
+ .name{
+    margin-left: 3%;
+    justify-content: left;
+ }
+ .quantity{
+    justify-content: center;
+}
+.status{
+    margin-left: 1%;
+    float: right;
+}
+
+.first-product, .second-product, .third-product{
+    align-items: center;
+}
+
+.minus, .plus, .cancel, .number, .isBought{
+    background-color: #DB2828;
+    border-radius: 50%;
+    color: white;
+    border:0;
+	box-shadow: 0 4px #BF2728;
+    font-size: 18px;
+    height: 34px;
+	width:38px;
+    font-weight: bold;
+    margin-left: 3%;
+    margin-bottom: 4px;
+}
+
+.plus{
+    background-color: #22BA46;
+	box-shadow: 0 4px #21A340;
+}
+.number{
+    border-radius: 5px;
+    background-color: #E8E8E8;
+    color:#5D5D5D;
+    box-shadow: 0 0px;
+    font-size: 16px;
+    margin-bottom: 0;
+}
+.isBought{
+    background-color: #F2F2F2;
+    box-shadow: 0 4px #C2C2C3;
+    color:#6B6B6B;
+    font-size: 11px;
+    border-radius: 5px;
+    width:40%;
+    border: 1px solid #C2C2C3;
+}
+.cancel{
+    border-radius: 5px;
+    font-size: 14px;   
+    margin-right:7%; 
+}
+section.first-product > div.status > button.cancel{
+    visibility: hidden;
+    position: absolute;
+}
+section.first-product > div.status > button.isBought{
+    margin-right: 7%;
+}
+.first-product > .name > p{
+    text-decoration: line-through;
 }
 
 footer{
@@ -59,13 +143,14 @@ footer{
     left:0;
     bottom:0;
 }
+
 .popup-badge{
     background-color: #AF00DA;
     margin-left: 50px;
     width: 100px;
     height: 40px;
     border:0;
-    border-radius: 7px;
+    border-radius: 7px 7px 0 0;
     padding: 0;
 	transition: all 1s ease;
 }
@@ -101,5 +186,10 @@ footer{
     }
     main, aside{
         width: 100%;
+    }
+} 
+@media (max-width: 588px){
+    .isBought{
+        font-size: 7px;
     }
 }
