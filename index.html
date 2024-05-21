@@ -14,7 +14,7 @@
                 <button class="add-button" type="submit">Додати</button>
             </form>
             <section class="first-product">
-                <div class="name">
+                <div class="name" contenteditable="false">
                     <p>Помідори</p>
                 </div>
                 <div class="quantity">
@@ -28,7 +28,7 @@
                 </div>
             </section>
             <section class="second-product">
-                <div class="name">
+                <div class="name" contenteditable="true" >
                     <p>Печиво</p>
                 </div>
                 <div class="quantity">
@@ -43,11 +43,11 @@
             </section>
             <section class="third-product">
                 <div class="name" contenteditable="true">
-                    <p>Сир</p>
+                    <p contenteditable="true">Сир</p>
                 </div>
                 <div class="quantity">
                     <button class="minus">-</button>
-                    <button class="number">2</button>
+                    <button class="number">1</button>
                     <button class="plus">+</button>
                 </div>
                 <div class="status">
@@ -57,8 +57,8 @@
             </section>
         </main>
 
-        <aside class="cart buylist">
-            <p class="title">Залишилось</p>
+        <aside class="cart">
+            <h2 class="title">Залишилось</h2>
             <div class="remaining-item">
                 <span class="product-item">
                     Печиво
@@ -69,7 +69,7 @@
                     <span class="amount">1</span>
                 </span>
             </div>
-            <p class="title">Куплено</p>
+            <h2 class="title">Куплено</h2>
             <div class="bought-item">
                 <span class="product-item">
                     Помідори
