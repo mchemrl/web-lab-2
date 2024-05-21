@@ -2,9 +2,7 @@ body{
     background-color: #DADADA;
     font-family: Trebuchet MS, sans-serif;
     display: flex;
-    flex-wrap: wrap;
     justify-content: space-between;
-	box-sizing: border-box;
     flex-direction: row;
 }
 main, aside{
@@ -16,12 +14,13 @@ main, aside{
     margin-top: 2%;
 }
 main{
-flex:4;
-height: 30%;
+    flex:4;
+    height: 100%;
 }
 aside{
-flex:1;
-margin-right: 2%;
+    flex:1;
+    margin-right: 3%;
+    height: 260px;
 }
 .adder{
     display: flex;   
@@ -80,11 +79,6 @@ section{
 }
 .status{
     margin-left: 1%;
-    float: right;
-}
-
-.first-product, .second-product, .third-product{
-    align-items: center;
 }
 
 .minus, .plus, .cancel, .number, .isBought{
@@ -100,7 +94,6 @@ section{
     margin-left: 3%;
     margin-bottom: 4px;
 }
-
 .plus{
     background-color: #22BA46;
 	box-shadow: 0 4px #21A340;
@@ -127,30 +120,32 @@ section{
     font-size: 14px;   
     margin-right:7%; 
 }
-section.first-product > div.status > button.cancel{
+.first-product > .status > .cancel{
     visibility: hidden;
     position: absolute;
 }
-section.first-product > div.status > button.isBought{
+.first-product > .status > .isBought{
     margin-right: 7%;
 }
 [contenteditable="false"]{
 	text-decoration: line-through;
 }
-[contenteditable="true"]:focus{
-    text-indent: 3px;
-    font-size: 13.7px;
-}
 .name:focus{
 	border: 1px solid #60AEEA;
 	box-shadow: 4px 4px 8px #C0DEF5;
 	outline: none;
-    height: 30px;
+    height: 30%;
     border-radius: 4px;
     margin-top:1%;
     margin-bottom: 1%;
-    width: 60px;
-    padding-right: 25.5%;
+    width: 33%;
+    text-indent: 3px;
+    font-size: 13.7px;
+}
+.product-name:focus{
+    border: 1px solid #60AEEA;
+	box-shadow: 4px 4px 8px #C0DEF5;
+	outline: none;
 }
 
 .third-product > .quantity > .minus{
@@ -160,14 +155,6 @@ section.first-product > div.status > button.isBought{
 .first-product > .quantity > .minus, .first-product > .quantity > .plus{
     visibility: hidden;
 }
-
-
-.cart{
-	margin-right: 3%;
-	margin-left: 3%;
-
-}
-
 .title{
     font-size: 20px;
     color: #212121;
@@ -177,12 +164,14 @@ section.first-product > div.status > button.isBought{
     border-bottom: 1px solid #BFBFBF;
     height: 25%;
     margin: 0;
+    text-indent: 15px;
 }
 .remaining-item, .bought-item{
     height: 25%;
     align-items: center;
 	display: flex;
     border: 5px;
+    margin-left: 5%;
 }
 .remaining-item{
     border-bottom: 1px solid lightgrey;
@@ -194,8 +183,8 @@ section.first-product > div.status > button.isBought{
     padding: 2.6%;
     margin-left: 3%;
     font-weight: bold;
-    font-size: 14px;
-    
+    font-size: 14px;   
+    display: inline-block; 
 }
 .amount{
     color: white;
@@ -206,6 +195,13 @@ section.first-product > div.status > button.isBought{
 	height: 20px;
 	width: 20px;
     text-align: center;
+    font-size: 13px;
+}
+.bought-item{
+    text-decoration: line-through;
+}
+.bought-item > .product-item > .amount{
+    text-decoration: line-through;
 }
 
 footer{
@@ -256,6 +252,9 @@ footer{
     .title{
         font-size: 14px;
     }
+    .add-button{
+        font-size: 12px;
+    }
 }
 
 @media (max-width: 500px){
@@ -272,6 +271,6 @@ footer{
         padding: 5% 0 5% 0;
     }
     .product-item{
-        margin: 3% 0 3% 2%;;
+        margin: 5% 0 5% 15px;;
     }
 } 
