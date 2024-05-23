@@ -11,20 +11,20 @@
         <main class="product-box buylist">
             <form class="adder">
                 <input class="product-name" type="text" placeholder="Назва товару">
-                <button class="add-button" type="submit">Додати</button>
+                <button class="add-button" type="submit" data-tooltip="Додати продукт">Додати</button>
             </form>
             <section class="first-product">
                 <div class="name" contenteditable="false">
                     <p>Помідори</p>
                 </div>
                 <div class="quantity">
-                    <button class="minus">-</button>
-                    <button class="number">2</button>
-                    <button class="plus">+</button>
+                    <button class="minus" data-tooltip="Зменшити">-</button>
+                    <button class="number" data-tooltip="Кількість">2</button>
+                    <button class="plus" data-tooltip="Збільшіти">+</button>
                 </div>
                 <div class="status">
-                    <button class="isBought">Не куплено</button>
-                    <button class="cancel">x</button>    
+                    <button class="isBought" data-tooltip="Статус">Не куплено</button>
+                    <button class="cancel" data-tooltip="Видалити">x</button>    
                 </div>
             </section>
             <section class="second-product">
@@ -32,13 +32,13 @@
                     <p>Печиво</p>
                 </div>
                 <div class="quantity">
-                    <button class="minus">-</button>
-                    <button class="number">2</button>
-                    <button class="plus">+</button>
+                    <button class="minus"  data-tooltip="Зменшити">-</button>
+                    <button class="number" data-tooltip="Кількість">2</button>
+                    <button class="plus" data-tooltip="Збільшіти">+</button>
                 </div>
                 <div class="status">
-                    <button class="isBought">Куплено</button>
-                    <button class="cancel">x</button>   
+                    <button class="isBought" data-tooltip="Статус">Куплено</button>
+                    <button class="cancel" data-tooltip="Видалити">x</button>   
                 </div>
             </section>
             <section class="third-product">
@@ -46,13 +46,13 @@
                     <p contenteditable="true">Сир</p>
                 </div>
                 <div class="quantity">
-                    <button class="minus">-</button>
-                    <button class="number">1</button>
-                    <button class="plus">+</button>
+                    <button class="minus" data-tooltip="Зменшити">-</button>
+                    <button class="number" data-tooltip="Кількість">1</button>
+                    <button class="plus" data-tooltip="Збільшіти">+</button>
                 </div>
                 <div class="status">
-                    <button class="isBought">Куплено</button>
-                    <button class="cancel">x</button>   
+                    <button class="isBought" data-tooltip="Статус">Куплено</button>
+                    <button class="cancel" data-tooltip="Видалити">x</button>   
                 </div>
             </section>
         </main>
