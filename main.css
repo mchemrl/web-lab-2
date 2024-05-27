@@ -6,7 +6,7 @@ body{
     flex-direction: row;
     flex-wrap: wrap;
 }
-main, aside{
+.product-box, .cart{
     width: 70%;
     background-color: white;
     border-radius: 5px;
@@ -14,13 +14,13 @@ main, aside{
     margin-left: 2%;
     margin-top: 2.5%;
 }
-main{
+.product-box{
     flex:3;
     height: 100%;
 }
-aside{
+.cart{
     flex:1;
-    margin-right: 3%;
+    margin-right: 2%;
     height: 260px;
 }
 .adder{
@@ -61,13 +61,12 @@ aside{
     flex: 5;
     margin-top: 5px;
 }
-section{
+.product{
     display: flex;
 	border-bottom: 1.5px solid lightgrey;
     align-items: center;
     height: 22%;
 }
-
 .name, .quantity, .status{
     width: 33%;
     height: 65%;
@@ -85,7 +84,6 @@ section{
 .status{
     margin-left: 1%;
 }
-
 .minus, .plus, .cancel, .number, .isBought{
     background-color: #DB2828;
     border-radius: 50%;
@@ -134,11 +132,11 @@ section{
     font-size: 14px;   
     margin-right:7%; 
 }
-.first-product > .status > .cancel{
+.first > .status > .cancel{
     visibility: hidden;
     position: absolute;
 }
-.first-product > .status > .isBought{
+.first > .status > .isBought{
     margin-right: 7%;
 }
 [contenteditable="false"]{
@@ -161,12 +159,11 @@ section{
 	box-shadow: 4px 4px 8px #C0DEF5;
 	outline: none;
 }
-
-.third-product > .quantity > .minus{
+.third > .quantity > .minus{
     background-color: #EF9F9E;
     box-shadow: 0 4px #EF9F9E;
 }
-.first-product > .quantity > .minus, .first-product > .quantity > .plus{
+.first > .quantity > .minus, .first > .quantity > .plus{
     visibility: hidden;
 }
 .title{
@@ -236,15 +233,12 @@ section{
     opacity: 0;
     transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
     transform-origin: bottom;
-    position: absolute;
-    
+    position: absolute; 
 }
-
 [data-tooltip]:hover:before {
     transform: translateX(-50%) scaleY(1);
     opacity: 1;
 }
-
 .popup-badge{
     background-color: #AF00DA;
     margin-left: 50px;
@@ -282,7 +276,6 @@ section{
     text-align: left;
     margin-left: 20px;
 }
-
 @media (max-width: 588px){
     .isBought{
         font-size: 7px;
@@ -294,14 +287,13 @@ section{
         font-size: 12px;
     }
 }
-
 @media (max-width: 500px){
     body{
         display: flex;
         flex-direction: column;
         margin-right: 5%;
     }
-    main, aside{
+    .product-box, .cart{
         width: 100%;
     }
     .title{
@@ -312,8 +304,7 @@ section{
         margin: 5% 0 5% 15px;
     }
 } 
-
-@media print {
+@media print{
     *{
         -print-color-adjust: exact;
         -webkit-print-color-adjust: exact;
@@ -332,5 +323,4 @@ section{
         color:black;
         margin-left: 10px;
     }
-  
 }
